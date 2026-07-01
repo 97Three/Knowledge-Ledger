@@ -1,0 +1,27 @@
+{
+  "name": "knowledge-ledger",
+  "private": true,
+  "packageManager": "pnpm@11.13.1",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "build": "pnpm --filter @nian/sdk build && pnpm --filter @nian/mcp-server build && pnpm --filter @nian/core build && pnpm --filter @nian/web build",
+    "check": "pnpm typecheck && pnpm test && pnpm contracts:check && pnpm docs:check && pnpm worker:check && pnpm sdk:check",
+    "contracts:check": "pnpm --filter @nian/core contracts:check",
+    "db:migrate": "pnpm --filter @nian/core db:migrate",
+    "dev": "pnpm --filter @nian/core dev",
+    "dev:web": "pnpm --filter @nian/web dev",
+    "docs:check": "node scripts/check-docs.mjs",
+    "test:integration": "node scripts/run-integration.mjs",
+    "start": "pnpm --filter @nian/core start",
+    "smoke:web": "pnpm --filter @nian/web smoke",
+    "seed:quantpilot-acceptance": "pnpm --filter @nian/web seed:quantpilot-acceptance",
+    "seed:quantpilot-acceptance-50": "pnpm --filter @nian/web seed:quantpilot-acceptance-50",
+    "sdk:check": "pnpm --filter @nian/sdk typecheck && pnpm --filter @nian/mcp-server typecheck && PYTHONPATH=packages/sdk-python python -m unittest discover -s packages/sdk-python/tests",
+    "test": "pnpm --filter @nian/core test && pnpm --filter @nian/web test",
+    "typecheck": "pnpm --filter @nian/sdk typecheck && pnpm --filter @nian/mcp-server typecheck && pnpm --filter @nian/core typecheck && pnpm --filter @nian/web typecheck",
+    "worker:check": "uv run --project workers/knowledge-worker --group dev ruff check workers/knowledge-worker/src workers/knowledge-worker/tests && uv run --project workers/knowledge-worker --group dev pytest workers/knowledge-worker/tests",
+    "worker:run": "uv run --project workers/knowledge-worker python -m nian_worker"
+  }
+}
