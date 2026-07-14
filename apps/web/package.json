@@ -1,0 +1,37 @@
+{
+  "name": "@nian/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vue-tsc --noEmit -p tsconfig.json && vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "smoke": "tsx scripts/smoke.ts",
+    "seed:quantpilot-acceptance": "tsx scripts/seed-quantpilot-acceptance.ts",
+    "seed:quantpilot-acceptance-50": "tsx scripts/seed-quantpilot-acceptance-50.ts",
+    "seed:ledger-demo": "tsx scripts/seed-ledger-demo.ts",
+    "test": "vitest run",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "2.3.2",
+    "element-plus": "2.14.8",
+    "json-canonicalize": "2.0.0",
+    "lucide-vue-next": "^1.0.0",
+    "pinia": "^3.0.4",
+    "vue": "3.5.45",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "@vitejs/plugin-vue": "6.0.10",
+    "@vue/test-utils": "^2.4.6",
+    "jsdom": "29.1.1",
+    "tsx": "4.23.1",
+    "typescript": "5.9.3",
+    "vite": "8.1.4",
+    "vitest": "4.1.10",
+    "vue-tsc": "3.3.14"
+  }
+}
