@@ -1,0 +1,68 @@
+/* ============================================================
+   知谱 Knowledge Ledger — design tokens
+   纸、墨、朱砂：一个档案式的知识账本。
+   所有颜色/间距/字体只能从这里取，页面里不写死数值。
+   ============================================================ */
+:root {
+  /* 表面 */
+  --paper: #f7f4ee;
+  --paper-deep: #f1ede4;
+  --card: #ffffff;
+  --card-warm: #fffdf9;
+
+  /* 文字 */
+  --ink: #16130e;
+  --ink-2: #3d382f;
+  --muted: #7a7365;
+  --faint: #a69c8a;
+
+  /* 线 */
+  --line: #e5ded1;
+  --line-2: #d5cbb8;
+  --line-soft: #f0ebe1;
+
+  /* 强调：朱砂 */
+  --accent: #b4441e;
+  --accent-hover: #9a3a18;
+  --accent-soft: #fbede7;
+  --accent-line: #efcfc1;
+
+  /* 语义色 */
+  --jade: #2c6a57;
+  --jade-soft: #e7f1ec;
+  --jade-line: #c6ded4;
+
+  --gold: #8a6a18;
+  --gold-soft: #f7efdb;
+  --gold-line: #e8dbb8;
+
+  --slate-soft: #efede7;
+  --slate: #6d675b;
+
+  /* 侧栏 */
+  --sidebar: #17140f;
+  --sidebar-raised: #1e1a15;
+  --sidebar-line: #2a251e;
+  --sidebar-ink: #cfc7b8;
+  --sidebar-muted: #867d6c;
+
+  /* 形状 */
+  --radius: 3px;
+  --radius-sm: 2px;
+  --radius-lg: 5px;
+
+  /* 排版 */
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei",
+    "Noto Sans SC", sans-serif;
+  --mono: ui-monospace, "SFMono-Regular", "Cascadia Mono", Consolas, "Liberation Mono", monospace;
+
+  /* 布局 */
+  --sidebar-width: 248px;
+  --topbar-height: 58px;
+  --content-max: 1320px;
+  --gap: 18px;
+  --gap-sm: 10px;
+
+  /* 动效 */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
