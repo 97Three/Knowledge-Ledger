@@ -1,0 +1,11 @@
+# Default ownership
+* @97Three
+
+# Security, protocol and persistence boundaries require explicit review.
+/.github/ @97Three
+/infra/ @97Three
+/specs/ @97Three
+/contracts/ @97Three
+/apps/core/src/platform/ @97Three
+/apps/core/src/modules/growth/ @97Three
+/apps/core/src/modules/query/ @97Three
