@@ -9,7 +9,7 @@ RUN pnpm install --filter @nian/web... --frozen-lockfile
 COPY apps/web apps/web
 RUN pnpm --filter @nian/web build
 
-FROM nginx:1.30.4-alpine@sha256:59d10bca5c674965ef4ff884715000dd60ef5567c36663523f108eec8e4105d4
+FROM nginx:1.31.8-alpine@sha256:713fc2ebfd92e8217db451477182ee91944b123d2b1ee9fd5a8c6e91ca6c3a11
 COPY infra/docker/web.nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /workspace/apps/web/dist /usr/share/nginx/html
 EXPOSE 8080
